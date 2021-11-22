@@ -177,7 +177,7 @@ ResultSet r = null;
 
                c = DriverManager.getConnection(URL,username,password); 
                s = c.prepareStatement(query);
-               s.setString(1, user_email); //what about if it's incorrecr email?
+               s.setString(1, user_email); 
                r = s.executeQuery();
                if(!r.next())
                     JOptionPane.showMessageDialog(login.this, "incorrect email","Message",JOptionPane.ERROR_MESSAGE);
