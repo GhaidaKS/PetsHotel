@@ -36,13 +36,20 @@ public class RegistrationJavaFX extends Application {
     final static javafx.scene.image.Image h1 = new javafx.scene.image.Image(RegistrationJavaFX.class.getResource("/img/bird1.jpg").toString());
     final static javafx.scene.image.Image h2 = new javafx.scene.image.Image(RegistrationJavaFX.class.getResource("/img/bird2.jpg").toString());
     
+    final static javafx.scene.image.Image s = new javafx.scene.image.Image(RegistrationJavaFX.class.getResource("/img/sun (1).png").toString());
+    final static javafx.scene.image.Image m = new javafx.scene.image.Image(RegistrationJavaFX.class.getResource("/img/moon (2).png").toString());
+    
     
      private Group Bird;
+     private Group dayNight;
      
     @Override
     public void start(Stage primaryStage) {
         final ImageView Bird1=new ImageView(h1);
         final ImageView Bird2=new ImageView(h2);
+        
+        final ImageView sun=new ImageView(s);
+        final ImageView moon=new ImageView(m);
         
         
         Button b = new Button();
@@ -95,8 +102,29 @@ public class RegistrationJavaFX extends Application {
         t.play();
         
         
+        dayNight=new Group(sun);
+        dayNight.setTranslateX(20);
+        dayNight.setTranslateY(20);
+        Timeline t1=new Timeline();
+        t1.setCycleCount(Timeline.INDEFINITE);
+                t1.getKeyFrames().add(new KeyFrame(
+                Duration.millis(100),
+                (ActionEvent event) -> {
+                 dayNight.getChildren().setAll(sun);
+                }
+        ));
+        t1.getKeyFrames().add(new KeyFrame(
+                Duration.millis(200),
+                (ActionEvent event) -> {
+                 dayNight.getChildren().setAll(moon);
+                }
+        ));
+        t1.play();
         
-        Group root= new Group(Bird,b,b2,l); 
+        
+        
+        
+        Group root= new Group(Bird,b,b2,l,dayNight); 
         
         Scene scene=new Scene(root,375,780);
         primaryStage.setScene(scene);
