@@ -56,7 +56,8 @@ public class Sign_up extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(525, 1050));
+        setLocation(new java.awt.Point(800, 100));
+        setPreferredSize(new java.awt.Dimension(544, 1166));
 
         FirstNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         FirstNameLabel.setForeground(new java.awt.Color(102, 102, 102));
@@ -127,7 +128,7 @@ public class Sign_up extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(0, 4));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -141,7 +142,7 @@ public class Sign_up extends javax.swing.JFrame {
             .addGap(0, 4, Short.MAX_VALUE)
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
         jPanel2.setPreferredSize(new java.awt.Dimension(0, 4));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -155,7 +156,7 @@ public class Sign_up extends javax.swing.JFrame {
             .addGap(0, 4, Short.MAX_VALUE)
         );
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
         jPanel3.setPreferredSize(new java.awt.Dimension(0, 4));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -169,7 +170,7 @@ public class Sign_up extends javax.swing.JFrame {
             .addGap(0, 4, Short.MAX_VALUE)
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
         jPanel4.setPreferredSize(new java.awt.Dimension(0, 4));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -183,7 +184,7 @@ public class Sign_up extends javax.swing.JFrame {
             .addGap(0, 4, Short.MAX_VALUE)
         );
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel5.setBackground(new java.awt.Color(153, 153, 153));
         jPanel5.setPreferredSize(new java.awt.Dimension(0, 4));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -310,7 +311,6 @@ public class Sign_up extends javax.swing.JFrame {
             jLabel1.setText("this account is alrady exist");
         else {
             user_database.Insert_users(FirstNameTextField.getText(),LastNameTextField.getText(),EmailTextField.getText(),PasswordTextField.getText(),PhoneTextField.getText());
-//          acc.setInfo(FirstNameTextField.getText(),LastNameTextField.getText());
             user_database.setEMAIL(EmailTextField.getText());
             this.dispose();
             new Home().setVisible(true);

@@ -25,7 +25,6 @@ public class user_database {
     
       return DriverManager.getConnection("jdbc:derby://localhost:1527/PetsHotel","GW","1234");
     }
-    //(default,FIRST_NAME,LAST_NAME,EMAIL,PASSWORD,PHONE_NUMBER)
     public static void Insert_users(String firstName,String LastName, String Email,String password, String Phone){
         try{
         Connection con=connect();
@@ -130,7 +129,7 @@ public class user_database {
   
         while(result.next())
         {
-           info= result.getString("FIRST_NAME")+"  "+ result.getString("LAST_NAME");
+           info= result.getString("FIRST_NAME")+" "+ result.getString("LAST_NAME");
         }
         }catch (SQLException ex) 
         {
